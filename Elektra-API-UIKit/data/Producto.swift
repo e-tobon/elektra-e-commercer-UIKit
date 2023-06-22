@@ -7,18 +7,21 @@
 
 import Foundation
 //Creacion del modelo producto con el protocolo Decodable
-struct Producto: Decodable{
-    let resultado:Productos?
+struct Productos: Codable{
+    let codigo:String?
+    let resultado:Articulos?
+    
+    
 }
 
-struct Productos:Decodable{
-    let productos:[Articulos]?
+struct Articulos: Codable{
+    let productos: [producto]?
 }
 
-struct Articulos:Decodable{
-    let id:String?
-    let nombre:String?
-    let codigoCategoria:String?
+struct producto: Codable{
+    let id: String?
+    let nombre: String?
     let urlImagenes:[String]?
-    let precioFinal: Int?
+    let precio: Int?
+    let codigoCategoria: String?
 }
