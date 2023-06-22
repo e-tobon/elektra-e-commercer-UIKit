@@ -63,12 +63,17 @@ extension ListaProductosViewController:UITableViewDataSource{
 
 extension ListaProductosViewController: webServiceDelegate{
     func updateProductos(productos: Productos) {
-        DispatchQueue.main.async {
-            self.productos = productos
-            self.activity.isHidden = true
-            self.productosTableView.reloadData()
+            DispatchQueue.main.async {
+                if productos != nil {
+                    self.productos = productos
+                }
             
-        }
+                self.activity.isHidden = true
+                self.productosTableView.reloadData()
+                
+            }
+        
+       
     }
     
     

@@ -14,10 +14,10 @@
             filePath = "Elektra-API-UIKit/ListaProductosViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "ListaProductosViewController"
-            landmarkType = "21">
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "updateProductos(productos:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
