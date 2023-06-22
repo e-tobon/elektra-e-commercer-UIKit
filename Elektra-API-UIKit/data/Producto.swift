@@ -22,6 +22,6 @@ struct producto: Codable{
     let id: String?
     let nombre: String?
     let urlImagenes:[String]?
-    let precio: Int?
+    let precioFinal: Double?
     let codigoCategoria: String?
 }

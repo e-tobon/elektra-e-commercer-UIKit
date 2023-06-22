@@ -16,6 +16,8 @@
 		E47B62782A448917009FB6AE /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B62772A448917009FB6AE /* Producto.swift */; };
 		E47B627D2A448DD6009FB6AE /* webService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B627C2A448DD6009FB6AE /* webService.swift */; };
 		E47B62812A44A48F009FB6AE /* ListaProductosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B62802A44A48F009FB6AE /* ListaProductosViewController.swift */; };
+		E47B62842A44B172009FB6AE /* ArticuloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B62822A44B172009FB6AE /* ArticuloTableViewCell.swift */; };
+		E47B62852A44B172009FB6AE /* ArticuloTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E47B62832A44B172009FB6AE /* ArticuloTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		E47B62772A448917009FB6AE /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		E47B627C2A448DD6009FB6AE /* webService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webService.swift; sourceTree = "<group>"; };
 		E47B62802A44A48F009FB6AE /* ListaProductosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProductosViewController.swift; sourceTree = "<group>"; };
+		E47B62822A44B172009FB6AE /* ArticuloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticuloTableViewCell.swift; sourceTree = "<group>"; };
+		E47B62832A44B172009FB6AE /* ArticuloTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticuloTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				E47B626D2A448866009FB6AE /* LaunchScreen.storyboard */,
 				E47B62702A448866009FB6AE /* Info.plist */,
 				E47B62802A44A48F009FB6AE /* ListaProductosViewController.swift */,
+				E47B62822A44B172009FB6AE /* ArticuloTableViewCell.swift */,
+				E47B62832A44B172009FB6AE /* ArticuloTableViewCell.xib */,
 			);
 			path = "Elektra-API-UIKit";
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E47B62852A44B172009FB6AE /* ArticuloTableViewCell.xib in Resources */,
 				E47B626F2A448866009FB6AE /* LaunchScreen.storyboard in Resources */,
 				E47B626C2A448866009FB6AE /* Assets.xcassets in Resources */,
 				E47B626A2A448863009FB6AE /* Main.storyboard in Resources */,
@@ -169,6 +176,7 @@
 				E47B62652A448863009FB6AE /* SceneDelegate.swift in Sources */,
 				E47B62812A44A48F009FB6AE /* ListaProductosViewController.swift in Sources */,
 				E47B627D2A448DD6009FB6AE /* webService.swift in Sources */,
+				E47B62842A44B172009FB6AE /* ArticuloTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

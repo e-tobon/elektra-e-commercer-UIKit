@@ -17,6 +17,8 @@ protocol webServiceDelegate{
 class webService{
     var delegate:webServiceDelegate?
     var numeroProductos:Int?
+ 
+   
     func getproductos(){
         let urlString = "http://alb-dev-ekt-875108740.us-east-1.elb.amazonaws.com/sapp/productos/plp/1/ad2fdd4bbaec4d15aa610a884f02c91a"
         if let url = URL(string: urlString){
@@ -28,6 +30,7 @@ class webService{
                 if let productosModel = try? JSONDecoder().decode(Productos.self, from: data!){
                    self.delegate?.updateProductos(productos: productosModel)
                     self.numeroProductos = productosModel.resultado?.productos?.count
+                    
                     print(productosModel)
                     
                 }
