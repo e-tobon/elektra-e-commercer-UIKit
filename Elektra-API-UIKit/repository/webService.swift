@@ -31,7 +31,7 @@ class webService{
                    self.delegate?.updateProductos(productos: productosModel)
                     self.numeroProductos = productosModel.resultado?.productos?.count
                     
-                    print(productosModel)
+                    
                     
                 }
             }

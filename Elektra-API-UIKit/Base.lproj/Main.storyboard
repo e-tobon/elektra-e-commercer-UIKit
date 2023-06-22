@@ -22,20 +22,26 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
                                     <action selector="myButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DL-1j-4TV"/>
-                                    <segue destination="bwa-ld-0S8" kind="show" id="6fl-SZ-kOv"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="t1g-Yg-HgM">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXE-FN-ud6"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nu3-Zz-fuh"/>
+                            <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tC8-FX-XiZ"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyl-Kx-5o3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JaS-KG-9kV"/>
                     <connections>
+                        <outlet property="myActivity" destination="t1g-Yg-HgM" id="QUV-Ld-bbl"/>
                         <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
+                        <segue destination="bwa-ld-0S8" kind="show" identifier="mainToarticulo" id="ceh-7z-BZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,7 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtY-py-FOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1000" y="-99"/>
+            <point key="canvasLocation" x="1501" y="-99"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="k1E-Iz-Os5">

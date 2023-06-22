@@ -8,41 +8,33 @@
 import UIKit
 
 class ListaProductosViewController: UIViewController {
-
-    let apiService = webService()
+    
+    
     
     var productos:Productos?
+    
+    var articulo: producto?
+    
+    
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var productosTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Productos"
-        activity.color = .red
-        activity.startAnimating()
         productosTableView.register(UINib(nibName: "ArticuloTableViewCell", bundle: nil), forCellReuseIdentifier: "articuloCell")
         productosTableView.rowHeight = 500
-        apiService.getproductos()
-        
-        apiService.delegate = self
         productosTableView.dataSource = self
         productosTableView.delegate = self
         
     }
-    
-
 
 
 }
 
 extension ListaProductosViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let numProductos = apiService.numeroProductos{
-            return numProductos
-        }else{
-            return 0
-        }
-        
+        self.productos!.resultado!.productos!.count
     }
     
     
@@ -74,26 +66,13 @@ extension ListaProductosViewController:UITableViewDataSource{
 
 extension ListaProductosViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("Seleccionas: \(self.productos?.resultado?.productos?[indexPath.row].nombre ?? "")")
-    }
-}
-
-extension ListaProductosViewController: webServiceDelegate{
-    func updateProductos(productos: Productos) {
-            DispatchQueue.main.async {
-                if productos != nil {
-                    self.productos = productos
-                }
+        
             
-                self.activity.isHidden = true
-                self.productosTableView.reloadData()
-                
-            }
         
        
     }
-    
-    
 }
+
+
 
 
