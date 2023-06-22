@@ -26,6 +26,7 @@ class webService{
                 
                 if let productosModel = try? JSONDecoder().decode(Productos.self, from: data!){
                    // self.delegate?.updateProductos(productos: productosModel)
+                    print(productosModel)
                     
                 }
             }
