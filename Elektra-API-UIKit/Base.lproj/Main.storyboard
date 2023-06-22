@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z2F-Zp-BXj">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -20,6 +20,9 @@
                                 <rect key="frame" x="169.5" y="430.5" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <segue destination="bwa-ld-0S8" kind="show" id="6fl-SZ-kOv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -33,7 +36,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="-4"/>
+            <point key="canvasLocation" x="-19" y="-99"/>
+        </scene>
+        <!--Lista Productos View Controller-->
+        <scene sceneID="IZG-gt-QEt">
+            <objects>
+                <viewController id="bwa-ld-0S8" customClass="ListaProductosViewController" customModule="Elektra_API_UIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qWm-pq-MDj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Qa-ba3">
+                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mpX-41-3rX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LSS-Qa-ba3" firstAttribute="top" secondItem="mpX-41-3rX" secondAttribute="top" id="FVX-rM-oev"/>
+                            <constraint firstItem="LSS-Qa-ba3" firstAttribute="trailing" secondItem="mpX-41-3rX" secondAttribute="trailing" id="M3c-Nw-5Qo"/>
+                            <constraint firstItem="LSS-Qa-ba3" firstAttribute="bottom" secondItem="mpX-41-3rX" secondAttribute="bottom" id="fzf-3V-UDv"/>
+                            <constraint firstItem="LSS-Qa-ba3" firstAttribute="leading" secondItem="mpX-41-3rX" secondAttribute="leading" id="ion-W6-1Ai"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RlE-ky-UTu"/>
+                    <connections>
+                        <outlet property="productosTableView" destination="LSS-Qa-ba3" id="wD4-Nc-JZE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YtY-py-FOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000" y="-99"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k1E-Iz-Os5">
+            <objects>
+                <navigationController id="Z2F-Zp-BXj" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uzt-ql-GNg">
+                        <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h7T-Lp-0aT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fuj-vl-Jil" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1036" y="-99"/>
         </scene>
     </scenes>
     <resources>

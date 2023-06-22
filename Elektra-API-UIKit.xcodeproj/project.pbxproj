@@ -15,6 +15,7 @@
 		E47B626F2A448866009FB6AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47B626D2A448866009FB6AE /* LaunchScreen.storyboard */; };
 		E47B62782A448917009FB6AE /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B62772A448917009FB6AE /* Producto.swift */; };
 		E47B627D2A448DD6009FB6AE /* webService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B627C2A448DD6009FB6AE /* webService.swift */; };
+		E47B62812A44A48F009FB6AE /* ListaProductosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47B62802A44A48F009FB6AE /* ListaProductosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E47B62702A448866009FB6AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E47B62772A448917009FB6AE /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
 		E47B627C2A448DD6009FB6AE /* webService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webService.swift; sourceTree = "<group>"; };
+		E47B62802A44A48F009FB6AE /* ListaProductosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaProductosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E47B626B2A448866009FB6AE /* Assets.xcassets */,
 				E47B626D2A448866009FB6AE /* LaunchScreen.storyboard */,
 				E47B62702A448866009FB6AE /* Info.plist */,
+				E47B62802A44A48F009FB6AE /* ListaProductosViewController.swift */,
 			);
 			path = "Elektra-API-UIKit";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				E47B62782A448917009FB6AE /* Producto.swift in Sources */,
 				E47B62632A448863009FB6AE /* AppDelegate.swift in Sources */,
 				E47B62652A448863009FB6AE /* SceneDelegate.swift in Sources */,
+				E47B62812A44A48F009FB6AE /* ListaProductosViewController.swift in Sources */,
 				E47B627D2A448DD6009FB6AE /* webService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
