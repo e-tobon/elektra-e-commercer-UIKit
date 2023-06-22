@@ -14,10 +14,118 @@
             filePath = "Elektra-API-UIKit/ListaProductosViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
             landmarkName = "updateProductos(productos:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Elektra-API-UIKit/ListaProductosViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ListaProductosViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5 - 4ff53ff74127a161"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elektra_API_UIKit.ListaProductosViewController.activity.getter : Swift.Optional&lt;__C.UIActivityIndicatorView&gt;"
+                  moduleName = "Elektra-API-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etbn/Desktop/Elektra-API-UIKit/Elektra-API-UIKit/ListaProductosViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5 - c932cf97595c8555"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elektra_API_UIKit.ListaProductosViewController.activity.setter : Swift.Optional&lt;__C.UIActivityIndicatorView&gt;"
+                  moduleName = "Elektra-API-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etbn/Desktop/Elektra-API-UIKit/Elektra-API-UIKit/ListaProductosViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5 - a00a9bd220f60664"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elektra_API_UIKit.ListaProductosViewController.activity.modify : Swift.Optional&lt;__C.UIActivityIndicatorView&gt;"
+                  moduleName = "Elektra-API-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etbn/Desktop/Elektra-API-UIKit/Elektra-API-UIKit/ListaProductosViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5 - c9cd131d77505f46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elektra_API_UIKit.ListaProductosViewController.activity.modify : Swift.Optional&lt;__C.UIActivityIndicatorView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Elektra-API-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etbn/Desktop/Elektra-API-UIKit/Elektra-API-UIKit/ListaProductosViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "28">
+               </Location>
+               <Location
+                  uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5 - d19b3502cc4bc35a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elektra_API_UIKit.ListaProductosViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Elektra_API_UIKit.ListaProductosViewController"
+                  moduleName = "Elektra-API-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etbn/Desktop/Elektra-API-UIKit/Elektra-API-UIKit/ListaProductosViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "1526920D-216C-43CF-9C88-EF20DA955FC5 - 176ad9e1c610a37e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Elektra_API_UIKit.ListaProductosViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Elektra_API_UIKit.ListaProductosViewController&gt;"
+                  moduleName = "Elektra-API-UIKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/etbn/Desktop/Elektra-API-UIKit/Elektra-API-UIKit/ListaProductosViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

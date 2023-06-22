@@ -11,7 +11,8 @@ class ViewController: UIViewController {
     
     
     
-
+    @IBOutlet weak var myButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -20,5 +21,8 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func myButtonAction(_ sender: Any) {
+        myButton.isHidden = true
+    }
 }
 

@@ -21,6 +21,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
+                                    <action selector="myButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2DL-1j-4TV"/>
                                     <segue destination="bwa-ld-0S8" kind="show" id="6fl-SZ-kOv"/>
                                 </connections>
                             </button>
@@ -33,6 +34,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JaS-KG-9kV"/>
+                    <connections>
+                        <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
