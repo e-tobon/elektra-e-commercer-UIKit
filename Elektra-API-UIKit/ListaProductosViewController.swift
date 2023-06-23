@@ -33,8 +33,10 @@ class ListaProductosViewController: UIViewController {
         let indicex = self.productosTableView.indexPathForSelectedRow
         let indexNumber = indicex?.row
         let cv = segue.destination as? ViewController
-        cv?.titulo = productos?.resultado?.productos?[indexNumber!].nombre
+        
         cv?.Booleano = true
+        
+        cv?.titulo = productos?.resultado?.productos?[indexNumber!].nombre
            
         }
 
@@ -80,7 +82,7 @@ extension ListaProductosViewController: UITableViewDelegate{
         performSegue(withIdentifier: "articuloTomain", sender: self)
         self.indice = 5
         let articulo = productos?.resultado?.productos?[indexPath.row].nombre
-        print(articulo)
+        
     }
 }
 

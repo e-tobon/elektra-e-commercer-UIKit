@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var titulo: String?
     var Booleano: Bool = false
     
+    //Transferencia de Datos
+    
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
   
@@ -29,9 +31,13 @@ class ViewController: UIViewController {
         webAPI.delegate = self
         
         if Booleano == true{
+            myLabel.isHidden = false
             myButton.isHidden = true
+            myLabel.text = self.titulo ?? ""
         }
-        title  = titulo ?? "no titulo"
+        if Booleano == false{
+            myLabel.isHidden = true
+        }
     }
 
     @IBAction func myButtonAction(_ sender: Any) {
