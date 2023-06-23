@@ -35,6 +35,8 @@ class ViewController: UIViewController {
         myActivity.stopAnimating()
         webAPI.delegate = self
         
+        
+        
         if Booleano == true{
             myLabel.isHidden = false
             myButton.isHidden = true
@@ -44,6 +46,9 @@ class ViewController: UIViewController {
             myPagecontrol.numberOfPages = self.itemImagenes ?? 0
             myPagecontrol.currentPageIndicatorTintColor = .blue
             myPagecontrol.pageIndicatorTintColor = .lightGray
+            
+            //imagen
+            putImage(imagenes: self.imagenesArticulo ?? [""], indiceImagen: 0)
         }
         if Booleano == false{
             myLabel.isHidden = true
@@ -52,6 +57,7 @@ class ViewController: UIViewController {
             myPagecontrol.pageIndicatorTintColor = .lightGray
         }
     }
+
 
     @IBAction func myButtonAction(_ sender: Any) {
         myActivity.startAnimating()
@@ -70,21 +76,30 @@ class ViewController: UIViewController {
         }
     }
     
-//    func putImage(imagenes:[String],indiceImagen:Int){
-//        if let urlImage = imagenes[indiceImagen] as? String{
-//            if let imageURL = URL(string: urlImage){
-//                DispatchQueue.global().async {
-//                    guard let imagenData = try? Data(contentsOf: imageURL) else{return}
-//                    let imageArticulo = UIImage(data: imagenData)
-//                    DispatchQueue.main.async {
-//                        cell!.articuloImageView.image = imageArticulo
-//                        
-//                    }
-//                }
-//            }
-//                
-//        }
-//    }
+    
+    
+    func putImage(imagenes:[String],indiceImagen:Int){
+        if let urlImage = imagenes[indiceImagen] as? String{
+            if let imageURL = URL(string: urlImage){
+                DispatchQueue.global().async {
+                    guard let imagenData = try? Data(contentsOf: imageURL) else{return}
+                    let imageArticulo = UIImage(data: imagenData)
+                    DispatchQueue.main.async {
+                        self.myImageView.image = imageArticulo
+                        
+                    }
+                }
+            }
+                
+        }
+    }
+    @IBAction func myPageButtonAction(_ sender: Any) {
+        
+        DispatchQueue.main.async {
+            self.putImage(imagenes: self.imagenesArticulo ?? [""], indiceImagen: self.myPagecontrol.currentPage)
+        }
+       
+    }
 }
 extension ViewController:webServiceDelegate{
     func updateProductos(productos: Productos) {
