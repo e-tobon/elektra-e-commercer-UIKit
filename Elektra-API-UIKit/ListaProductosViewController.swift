@@ -50,6 +50,9 @@ class ListaProductosViewController: UIViewController {
         cv?.precionFinal = productos?.resultado?.productos?[indexNumber!].precioFinal
         
         cv?.precioRegular = productos?.resultado?.productos?[indexNumber!].precioRegular
+            
+        cv?.pagoSemanal = productos?.resultado?.productos?[indexNumber!].pagoSemanalPrincipal
+        
         }
 
 

@@ -22,6 +22,7 @@ class ViewController: UIViewController {
     var precionFinal: Double?
     var precioRegular:Double?
     var montoDescuento:Double?
+    var pagoSemanal: Int?
     var porcentajeDescuento: Double?
     
     @IBOutlet weak var StackViewPrecios: UIStackView!
@@ -32,9 +33,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var myPagecontrol: UIPageControl!
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myActivity: UIActivityIndicatorView!
-    
+    @IBOutlet weak var labelPagoSemanal: UILabel!
     @IBOutlet weak var labelPrecioRegular: UILabel!
     
+    @IBOutlet weak var stackViewSemanal: UIStackView!
     @IBOutlet weak var LabelPrecioFinal: UILabel!
     
     @IBOutlet weak var labelMontoDescuento: UILabel!
@@ -61,6 +63,7 @@ class ViewController: UIViewController {
             putImage(imagenes: self.imagenesArticulo ?? [""], indiceImagen: 0)
             
             
+            
             if(self.porcentajeDescuento != 0){
                 
                 labelDescuento.text = "\(porcentajeDescuento?.redondear(numeroDeDecimales: 0) ?? "")%"
@@ -70,7 +73,8 @@ class ViewController: UIViewController {
                 "Antes $\(self.precioRegular?.redondear(numeroDeDecimales: 0) ?? "")"
                 
                 LabelPrecioFinal.text = "Ahora $\(self.precionFinal?.redondear(numeroDeDecimales: 0) ?? "")"
-                labelMontoDescuento.text = "Ahorra $\(self.montoDescuento?.redondear(numeroDeDecimales: 0) ?? "")"
+                
+                labelMontoDescuento.text = "Ahorras $\(self.montoDescuento?.redondear(numeroDeDecimales: 0) ?? "")"
             }else{
                 OfertaStackView.isHidden = true
                 labelMontoDescuento.isHidden = true
@@ -79,7 +83,7 @@ class ViewController: UIViewController {
                 LabelPrecioFinal.text = "$\(self.precionFinal?.redondear(numeroDeDecimales: 0) ?? "")"
             }
             
-            
+            labelPagoSemanal.text = "$\(self.pagoSemanal ?? 0)"
         }
         if Booleano == false{
             myLabel.isHidden = true
@@ -89,6 +93,7 @@ class ViewController: UIViewController {
             
             OfertaStackView.isHidden = true
             StackViewPrecios.isHidden = true
+            stackViewSemanal.isHidden = true
         }
     }
 

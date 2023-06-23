@@ -96,13 +96,38 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="qSM-zv-cBY">
+                                <rect key="frame" x="299.5" y="656.5" width="94.5" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Llevatelo con solo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjP-OA-dAm">
+                                        <rect key="frame" x="0.0" y="0.0" width="94.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jo9-ua-ZoO">
+                                        <rect key="frame" x="19.5" y="32.5" width="56" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Semanales" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49a-dC-OBo">
+                                        <rect key="frame" x="14.5" y="78" width="66" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qSM-zv-cBY" secondAttribute="trailing" constant="20" id="4iD-os-LD2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a0p-FO-0Yr" secondAttribute="bottom" constant="300" id="8iC-HI-ef8"/>
                             <constraint firstItem="YQC-aT-liV" firstAttribute="top" secondItem="a0p-FO-0Yr" secondAttribute="bottom" constant="119" id="9Ug-yu-ImF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0p-FO-0Yr" secondAttribute="trailing" constant="70" id="Aqs-Ko-dJ8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qSM-zv-cBY" secondAttribute="bottom" constant="87.5" id="EJR-3J-ejr"/>
                             <constraint firstAttribute="bottom" secondItem="ClM-JW-5EB" secondAttribute="bottom" constant="580" id="OLD-4n-HWE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mAv-QY-Xjw" secondAttribute="trailing" constant="10" id="Rd0-gV-hnI"/>
                             <constraint firstItem="YQC-aT-liV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XXG-Bw-rxi"/>
@@ -129,12 +154,14 @@
                         <outlet property="StackViewPrecios" destination="YQC-aT-liV" id="jMO-fL-0on"/>
                         <outlet property="labelDescuento" destination="Yx9-lh-pLs" id="wBM-Qc-dAw"/>
                         <outlet property="labelMontoDescuento" destination="Vf9-vD-oMU" id="3p4-JJ-d3T"/>
+                        <outlet property="labelPagoSemanal" destination="jo9-ua-ZoO" id="Z1m-lp-lRy"/>
                         <outlet property="labelPrecioRegular" destination="HG0-Ab-nGE" id="Qcg-yw-iGa"/>
                         <outlet property="myActivity" destination="t1g-Yg-HgM" id="QUV-Ld-bbl"/>
                         <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
                         <outlet property="myImageView" destination="CVr-6N-Sor" id="AcY-S2-35D"/>
                         <outlet property="myLabel" destination="mAv-QY-Xjw" id="gL5-93-HH8"/>
                         <outlet property="myPagecontrol" destination="ExD-Na-wOA" id="bUr-qB-J7H"/>
+                        <outlet property="stackViewSemanal" destination="qSM-zv-cBY" id="pQQ-CY-7Wj"/>
                         <segue destination="bwa-ld-0S8" kind="show" identifier="mainToarticulo" id="ceh-7z-BZD"/>
                     </connections>
                 </viewController>

@@ -27,4 +27,5 @@ struct producto: Codable{
     let porcentajeDescuento: Double?
     let montoDescuento: Double?
     let precioRegular:Double?
+    let pagoSemanalPrincipal:Int?
 }
