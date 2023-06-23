@@ -33,30 +33,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVr-6N-Sor">
+                                <rect key="frame" x="20" y="116" width="374" height="194"/>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="ExD-Na-wOA">
+                                <rect key="frame" x="50" y="345" width="314" height="26"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mAv-QY-Xjw" secondAttribute="trailing" constant="10" id="Rd0-gV-hnI"/>
+                            <constraint firstItem="a0p-FO-0Yr" firstAttribute="top" secondItem="CVr-6N-Sor" secondAttribute="bottom" constant="91.5" id="WzN-AR-UaL"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXE-FN-ud6"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bpD-WH-byk"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="is1-ea-P1O"/>
+                            <constraint firstItem="CVr-6N-Sor" firstAttribute="top" secondItem="mAv-QY-Xjw" secondAttribute="bottom" constant="25" id="j5e-sA-nzQ"/>
+                            <constraint firstItem="CVr-6N-Sor" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jTv-Vn-iCU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ExD-Na-wOA" secondAttribute="trailing" constant="50" id="m2q-ff-4qI"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nu3-Zz-fuh"/>
+                            <constraint firstItem="ExD-Na-wOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="oHL-qA-M8d"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tC8-FX-XiZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVr-6N-Sor" secondAttribute="trailing" constant="20" id="uMX-x8-dG3"/>
+                            <constraint firstItem="ExD-Na-wOA" firstAttribute="top" secondItem="CVr-6N-Sor" secondAttribute="bottom" constant="35" id="w8h-5s-QQS"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyl-Kx-5o3"/>
+                            <constraint firstItem="ExD-Na-wOA" firstAttribute="centerX" secondItem="t1g-Yg-HgM" secondAttribute="centerX" id="zH4-Gs-rSQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JaS-KG-9kV"/>
                     <connections>
                         <outlet property="myActivity" destination="t1g-Yg-HgM" id="QUV-Ld-bbl"/>
                         <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
+                        <outlet property="myImageView" destination="CVr-6N-Sor" id="AcY-S2-35D"/>
                         <outlet property="myLabel" destination="mAv-QY-Xjw" id="gL5-93-HH8"/>
+                        <outlet property="myPagecontrol" destination="ExD-Na-wOA" id="bUr-qB-J7H"/>
                         <segue destination="bwa-ld-0S8" kind="show" identifier="mainToarticulo" id="ceh-7z-BZD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-19" y="-99"/>
+            <point key="canvasLocation" x="-20.289855072463769" y="-99.107142857142847"/>
         </scene>
         <!--Lista Productos View Controller-->
         <scene sceneID="IZG-gt-QEt">

@@ -11,14 +11,19 @@ class ViewController: UIViewController {
     
     let webAPI = webService()
     var productos: Productos?
-    var titulo: String?
-    var Booleano: Bool = false
+    
     
     //Transferencia de Datos
     
+    var titulo: String?
+    var Booleano: Bool = false
+    var imagenesArticulo: [String]?
+    var itemImagenes: Int?
+    
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
-  
+    @IBOutlet weak var myPagecontrol: UIPageControl!
+    @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myActivity: UIActivityIndicatorView!
     
     
@@ -33,10 +38,18 @@ class ViewController: UIViewController {
         if Booleano == true{
             myLabel.isHidden = false
             myButton.isHidden = true
+            myPagecontrol.isHidden = false
+            myImageView.isHidden = false
             myLabel.text = self.titulo ?? ""
+            myPagecontrol.numberOfPages = self.itemImagenes ?? 0
+            myPagecontrol.currentPageIndicatorTintColor = .blue
+            myPagecontrol.pageIndicatorTintColor = .lightGray
         }
         if Booleano == false{
             myLabel.isHidden = true
+            myPagecontrol.isHidden = true
+            myPagecontrol.currentPageIndicatorTintColor = .blue
+            myPagecontrol.pageIndicatorTintColor = .lightGray
         }
     }
 
@@ -56,6 +69,22 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+//    func putImage(imagenes:[String],indiceImagen:Int){
+//        if let urlImage = imagenes[indiceImagen] as? String{
+//            if let imageURL = URL(string: urlImage){
+//                DispatchQueue.global().async {
+//                    guard let imagenData = try? Data(contentsOf: imageURL) else{return}
+//                    let imageArticulo = UIImage(data: imagenData)
+//                    DispatchQueue.main.async {
+//                        cell!.articuloImageView.image = imageArticulo
+//                        
+//                    }
+//                }
+//            }
+//                
+//        }
+//    }
 }
 extension ViewController:webServiceDelegate{
     func updateProductos(productos: Productos) {

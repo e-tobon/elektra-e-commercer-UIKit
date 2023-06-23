@@ -13,7 +13,6 @@ class ArticuloTableViewCell: UITableViewCell {
 
     @IBOutlet weak var precioLabel: UILabel!
     @IBOutlet weak var categoriaLabel: UILabel!
-
     @IBOutlet weak var articuloImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
