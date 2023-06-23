@@ -60,19 +60,23 @@ class ViewController: UIViewController {
             //imagen
             putImage(imagenes: self.imagenesArticulo ?? [""], indiceImagen: 0)
             
-            LabelPrecioFinal.text = "$\(self.precionFinal?.redondear(numeroDeDecimales: 0) ?? "")"
+            
             if(self.porcentajeDescuento != 0){
                 
                 labelDescuento.text = "\(porcentajeDescuento?.redondear(numeroDeDecimales: 0) ?? "")%"
                 
                 labelPrecioRegular.text =
                 
-                "$\(self.precioRegular?.redondear(numeroDeDecimales: 0) ?? "")"
+                "Antes $\(self.precioRegular?.redondear(numeroDeDecimales: 0) ?? "")"
+                
+                LabelPrecioFinal.text = "Ahora $\(self.precionFinal?.redondear(numeroDeDecimales: 0) ?? "")"
+                labelMontoDescuento.text = "Ahorra $\(self.montoDescuento?.redondear(numeroDeDecimales: 0) ?? "")"
             }else{
                 OfertaStackView.isHidden = true
                 labelMontoDescuento.isHidden = true
                 labelPrecioRegular.isHidden = true
-                
+                LabelPrecioFinal.textColor = .black
+                LabelPrecioFinal.text = "$\(self.precionFinal?.redondear(numeroDeDecimales: 0) ?? "")"
             }
             
             
