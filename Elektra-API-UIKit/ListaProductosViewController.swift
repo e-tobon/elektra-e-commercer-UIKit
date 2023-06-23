@@ -13,14 +13,13 @@ class ListaProductosViewController: UIViewController {
     
     var productos:Productos?
     
-    var articulo: producto?
+    var indice:Int?
     
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var productosTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         title = "Productos"
         productosTableView.register(UINib(nibName: "ArticuloTableViewCell", bundle: nil), forCellReuseIdentifier: "articuloCell")
         productosTableView.rowHeight = 500
@@ -28,6 +27,16 @@ class ListaProductosViewController: UIViewController {
         productosTableView.delegate = self
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let indicex = self.productosTableView.indexPathForSelectedRow
+        let indexNumber = indicex?.row
+        let cv = segue.destination as? ViewController
+        cv?.titulo = productos?.resultado?.productos?[indexNumber!].nombre
+        cv?.Booleano = true
+           
+        }
 
 
 }
@@ -53,6 +62,7 @@ extension ListaProductosViewController:UITableViewDataSource{
                         let imageArticulo = UIImage(data: imagenData)
                         DispatchQueue.main.async {
                             cell!.articuloImageView.image = imageArticulo
+                            
                         }
                     }
                 }
@@ -65,11 +75,12 @@ extension ListaProductosViewController:UITableViewDataSource{
 }
 
 extension ListaProductosViewController: UITableViewDelegate{
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-            
-        
-       
+        performSegue(withIdentifier: "articuloTomain", sender: self)
+        self.indice = 5
+        let articulo = productos?.resultado?.productos?[indexPath.row].nombre
+        print(articulo)
     }
 }
 

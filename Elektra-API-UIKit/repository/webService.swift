@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 
@@ -24,15 +25,17 @@ class webService{
         if let url = URL(string: urlString){
             let task = URLSession.shared.dataTask(with: url) { data, _, error in
                 if error != nil{
+                    
                     print(error!.localizedDescription)
+                }
+                DispatchQueue.main.async {
                 }
                 
                 if let productosModel = try? JSONDecoder().decode(Productos.self, from: data!){
-                   self.delegate?.updateProductos(productos: productosModel)
+                    self.delegate?.updateProductos(productos: productosModel)
                     self.numeroProductos = productosModel.resultado?.productos?.count
                     
-                    
-                    
+                
                 }
             }
             task.resume()

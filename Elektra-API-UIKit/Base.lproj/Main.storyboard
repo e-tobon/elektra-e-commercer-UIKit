@@ -13,11 +13,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Elektra_API_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0p-FO-0Yr">
-                                <rect key="frame" x="169.5" y="430.5" width="75" height="35"/>
+                                <rect key="frame" x="169.5" y="401.5" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
@@ -25,13 +25,22 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="t1g-Yg-HgM">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                                <rect key="frame" x="197" y="409" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAv-QY-Xjw">
+                                <rect key="frame" x="10" y="113" width="394" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mAv-QY-Xjw" secondAttribute="trailing" constant="10" id="Rd0-gV-hnI"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXE-FN-ud6"/>
+                            <constraint firstItem="mAv-QY-Xjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="65" id="bpD-WH-byk"/>
+                            <constraint firstItem="mAv-QY-Xjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="is1-ea-P1O"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nu3-Zz-fuh"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tC8-FX-XiZ"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyl-Kx-5o3"/>
@@ -41,6 +50,7 @@
                     <connections>
                         <outlet property="myActivity" destination="t1g-Yg-HgM" id="QUV-Ld-bbl"/>
                         <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
+                        <outlet property="myLabel" destination="mAv-QY-Xjw" id="gL5-93-HH8"/>
                         <segue destination="bwa-ld-0S8" kind="show" identifier="mainToarticulo" id="ceh-7z-BZD"/>
                     </connections>
                 </viewController>
@@ -53,32 +63,27 @@
             <objects>
                 <viewController id="bwa-ld-0S8" customClass="ListaProductosViewController" customModule="Elektra_API_UIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qWm-pq-MDj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LSS-Qa-ba3">
-                                <rect key="frame" x="0.0" y="92" width="414" height="770"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="790"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="seQ-EI-WTG">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mpX-41-3rX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="seQ-EI-WTG" firstAttribute="centerX" secondItem="qWm-pq-MDj" secondAttribute="centerX" id="AKG-ju-uMy"/>
                             <constraint firstItem="LSS-Qa-ba3" firstAttribute="top" secondItem="mpX-41-3rX" secondAttribute="top" id="FVX-rM-oev"/>
                             <constraint firstItem="LSS-Qa-ba3" firstAttribute="trailing" secondItem="mpX-41-3rX" secondAttribute="trailing" id="M3c-Nw-5Qo"/>
                             <constraint firstItem="LSS-Qa-ba3" firstAttribute="bottom" secondItem="mpX-41-3rX" secondAttribute="bottom" id="fzf-3V-UDv"/>
-                            <constraint firstItem="seQ-EI-WTG" firstAttribute="centerY" secondItem="qWm-pq-MDj" secondAttribute="centerY" id="gzS-zy-BQx"/>
                             <constraint firstItem="LSS-Qa-ba3" firstAttribute="leading" secondItem="mpX-41-3rX" secondAttribute="leading" id="ion-W6-1Ai"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RlE-ky-UTu"/>
                     <connections>
-                        <outlet property="activity" destination="seQ-EI-WTG" id="7qY-Yw-m4u"/>
                         <outlet property="productosTableView" destination="LSS-Qa-ba3" id="wD4-Nc-JZE"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="articuloTomain" id="LrI-B0-77a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YtY-py-FOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -102,6 +107,10 @@
             <point key="canvasLocation" x="-1036" y="-99"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ceh-7z-BZD"/>
+        <segue reference="LrI-B0-77a"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

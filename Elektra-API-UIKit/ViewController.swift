@@ -11,35 +11,38 @@ class ViewController: UIViewController {
     
     let webAPI = webService()
     var productos: Productos?
+    var titulo: String?
+    var Booleano: Bool = false
     
+    @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
   
     @IBOutlet weak var myActivity: UIActivityIndicatorView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        myActivity.isHidden = true
+        myActivity.hidesWhenStopped = true
         myActivity.color = .red
+        myActivity.stopAnimating()
         webAPI.delegate = self
-    
-            
+        
+        if Booleano == true{
+            myButton.isHidden = true
+        }
+        title  = titulo ?? "no titulo"
     }
 
     @IBAction func myButtonAction(_ sender: Any) {
-        webAPI.getproductos()
-        myActivity.isHidden = false
         myActivity.startAnimating()
-    
+        myButton.isHidden = true
+        self.webAPI.getproductos()
         while(self.productos == nil){
-           
         }
-        myActivity.isHidden = true
-        performSegue(withIdentifier: "mainToarticulo", sender: self)
-        
-        
-        
-        
-    }
     
+        performSegue(withIdentifier: "mainToarticulo", sender: self)
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainToarticulo"{
             if let destino = segue.destination as? ListaProductosViewController{
@@ -48,7 +51,6 @@ class ViewController: UIViewController {
         }
     }
 }
-
 extension ViewController:webServiceDelegate{
     func updateProductos(productos: Productos) {
             self.productos = productos
@@ -56,3 +58,5 @@ extension ViewController:webServiceDelegate{
     
     
 }
+
+
