@@ -117,10 +117,10 @@ class ViewController: UIViewController {
         myActivity.startAnimating()
         myButton.isHidden = true
         self.webAPI.getproductos()
-        while(self.productos == nil){
-        }
-    
-        performSegue(withIdentifier: "mainToarticulo", sender: self)
+//        while(self.productos == nil){
+//        }
+//
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "mainToarticulo"{
@@ -158,7 +158,11 @@ class ViewController: UIViewController {
 }
 extension ViewController:webServiceDelegate{
     func updateProductos(productos: Productos) {
-            self.productos = productos
+        self.productos = productos
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: "mainToarticulo", sender: self)
+        }
+        
     }
     
     
