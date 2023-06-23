@@ -45,6 +45,11 @@ class ListaProductosViewController: UIViewController {
         cv?.imagenesArticulo = productos?.resultado?.productos?[indexNumber!].urlImagenes
         
         cv?.porcentajeDescuento = productos?.resultado?.productos?[indexNumber!].porcentajeDescuento
+        
+        cv?.montoDescuento = productos?.resultado?.productos?[indexNumber!].montoDescuento
+        cv?.precionFinal = productos?.resultado?.productos?[indexNumber!].precioFinal
+        
+        cv?.precioRegular = productos?.resultado?.productos?[indexNumber!].precioRegular
         }
 
 

@@ -26,4 +26,5 @@ struct producto: Codable{
     let codigoCategoria: String?
     let porcentajeDescuento: Double?
     let montoDescuento: Double?
+    let precioRegular:Double?
 }

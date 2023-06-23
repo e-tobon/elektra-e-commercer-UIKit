@@ -51,7 +51,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB3-Zu-E1k">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="14.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx9-lh-pLs">
@@ -63,7 +63,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="de descuento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok6-vP-e3G">
                                         <rect key="frame" x="0.0" y="115.5" width="82" height="14.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -72,14 +72,39 @@
                                     <constraint firstItem="nB3-Zu-E1k" firstAttribute="leading" secondItem="ClM-JW-5EB" secondAttribute="leading" id="orS-GF-xKi"/>
                                 </constraints>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YQC-aT-liV">
+                                <rect key="frame" x="30" y="657" width="56" height="85.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HG0-Ab-nGE">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtU-md-e1j">
+                                        <rect key="frame" x="0.0" y="29.5" width="56" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vf9-vD-oMU">
+                                        <rect key="frame" x="0.0" y="64" width="47" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a0p-FO-0Yr" secondAttribute="bottom" constant="300" id="8iC-HI-ef8"/>
+                            <constraint firstItem="YQC-aT-liV" firstAttribute="top" secondItem="a0p-FO-0Yr" secondAttribute="bottom" constant="119" id="9Ug-yu-ImF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0p-FO-0Yr" secondAttribute="trailing" constant="70" id="Aqs-Ko-dJ8"/>
                             <constraint firstAttribute="bottom" secondItem="ClM-JW-5EB" secondAttribute="bottom" constant="580" id="OLD-4n-HWE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mAv-QY-Xjw" secondAttribute="trailing" constant="10" id="Rd0-gV-hnI"/>
+                            <constraint firstItem="YQC-aT-liV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XXG-Bw-rxi"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXE-FN-ud6"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bpD-WH-byk"/>
                             <constraint firstItem="ClM-JW-5EB" firstAttribute="leading" secondItem="mAv-QY-Xjw" secondAttribute="leading" id="fv7-nF-CJJ"/>
@@ -98,8 +123,12 @@
                     </view>
                     <navigationItem key="navigationItem" id="JaS-KG-9kV"/>
                     <connections>
+                        <outlet property="LabelPrecioFinal" destination="XtU-md-e1j" id="FMe-ux-olY"/>
                         <outlet property="OfertaStackView" destination="ClM-JW-5EB" id="EBx-jm-MmT"/>
+                        <outlet property="StackViewPrecios" destination="YQC-aT-liV" id="jMO-fL-0on"/>
                         <outlet property="labelDescuento" destination="Yx9-lh-pLs" id="wBM-Qc-dAw"/>
+                        <outlet property="labelMontoDescuento" destination="Vf9-vD-oMU" id="3p4-JJ-d3T"/>
+                        <outlet property="labelPrecioRegular" destination="HG0-Ab-nGE" id="Qcg-yw-iGa"/>
                         <outlet property="myActivity" destination="t1g-Yg-HgM" id="QUV-Ld-bbl"/>
                         <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
                         <outlet property="myImageView" destination="CVr-6N-Sor" id="AcY-S2-35D"/>
@@ -168,6 +197,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

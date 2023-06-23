@@ -21,8 +21,10 @@ class ViewController: UIViewController {
     var itemImagenes: Int?
     var precionFinal: Double?
     var precioRegular:Double?
+    var montoDescuento:Double?
     var porcentajeDescuento: Double?
     
+    @IBOutlet weak var StackViewPrecios: UIStackView!
     @IBOutlet weak var labelDescuento: UILabel!
     @IBOutlet weak var OfertaStackView: UIStackView!
     @IBOutlet weak var myLabel: UILabel!
@@ -31,8 +33,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var myActivity: UIActivityIndicatorView!
     
+    @IBOutlet weak var labelPrecioRegular: UILabel!
     
+    @IBOutlet weak var LabelPrecioFinal: UILabel!
     
+    @IBOutlet weak var labelMontoDescuento: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         myActivity.hidesWhenStopped = true
@@ -55,11 +60,19 @@ class ViewController: UIViewController {
             //imagen
             putImage(imagenes: self.imagenesArticulo ?? [""], indiceImagen: 0)
             
+            LabelPrecioFinal.text = "$\(self.precionFinal?.redondear(numeroDeDecimales: 0) ?? "")"
             if(self.porcentajeDescuento != 0){
                 
                 labelDescuento.text = "\(porcentajeDescuento?.redondear(numeroDeDecimales: 0) ?? "")%"
+                
+                labelPrecioRegular.text =
+                
+                "$\(self.precioRegular?.redondear(numeroDeDecimales: 0) ?? "")"
             }else{
                 OfertaStackView.isHidden = true
+                labelMontoDescuento.isHidden = true
+                labelPrecioRegular.isHidden = true
+                
             }
             
             
@@ -71,6 +84,7 @@ class ViewController: UIViewController {
             myPagecontrol.pageIndicatorTintColor = .lightGray
             
             OfertaStackView.isHidden = true
+            StackViewPrecios.isHidden = true
         }
     }
 
