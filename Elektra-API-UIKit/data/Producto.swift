@@ -24,4 +24,6 @@ struct producto: Codable{
     let urlImagenes:[String]?
     let precioFinal: Double?
     let codigoCategoria: String?
+    let porcentajeDescuento: Double?
+    let montoDescuento: Double?
 }

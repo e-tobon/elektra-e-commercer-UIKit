@@ -54,6 +54,15 @@ class ViewController: UIViewController {
             
             //imagen
             putImage(imagenes: self.imagenesArticulo ?? [""], indiceImagen: 0)
+            
+            if(self.porcentajeDescuento != 0){
+                
+                labelDescuento.text = "\(porcentajeDescuento?.redondear(numeroDeDecimales: 0) ?? "")%"
+            }else{
+                OfertaStackView.isHidden = true
+            }
+            
+            
         }
         if Booleano == false{
             myLabel.isHidden = true
@@ -116,4 +125,12 @@ extension ViewController:webServiceDelegate{
     
 }
 
+extension Double {
+    func redondear(numeroDeDecimales: Int) -> String {
+        let formateador = NumberFormatter()
+        formateador.maximumFractionDigits = numeroDeDecimales
+        formateador.roundingMode = .down
+        return formateador.string(from: NSNumber(value: self)) ?? ""
+    }
+}
 
