@@ -16,15 +16,19 @@ class ListaProductosViewController: UIViewController {
     var indice:Int?
     
     
+    
     @IBOutlet weak var activity: UIActivityIndicatorView!
     @IBOutlet weak var productosTableView: UITableView!
     override func viewDidLoad() {
+        self.navigationItem.setHidesBackButton(true, animated: true)
         super.viewDidLoad()
         title = "Productos"
         productosTableView.register(UINib(nibName: "ArticuloTableViewCell", bundle: nil), forCellReuseIdentifier: "articuloCell")
         productosTableView.rowHeight = 500
         productosTableView.dataSource = self
         productosTableView.delegate = self
+        
+        
         
     }
     

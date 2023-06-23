@@ -25,6 +25,12 @@ class ViewController: UIViewController {
     var pagoSemanal: Int?
     var porcentajeDescuento: Double?
     
+    
+    
+ 
+  
+    
+    @IBOutlet weak var myBackButton: UIButton!
     @IBOutlet weak var StackViewPrecios: UIStackView!
     @IBOutlet weak var labelDescuento: UILabel!
     @IBOutlet weak var OfertaStackView: UIStackView!
@@ -41,13 +47,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var labelMontoDescuento: UILabel!
     override func viewDidLoad() {
+        
+    
         super.viewDidLoad()
+        
+        self.navigationItem.setHidesBackButton(true, animated: true)
         myActivity.hidesWhenStopped = true
         myActivity.color = .red
         myActivity.stopAnimating()
         webAPI.delegate = self
-        
-        
         
         if Booleano == true{
             myLabel.isHidden = false
@@ -86,6 +94,7 @@ class ViewController: UIViewController {
             labelPagoSemanal.text = "$\(self.pagoSemanal ?? 0)"
         }
         if Booleano == false{
+            myBackButton.isHidden = true
             myLabel.isHidden = true
             myPagecontrol.isHidden = true
             myPagecontrol.currentPageIndicatorTintColor = .blue
@@ -98,6 +107,12 @@ class ViewController: UIViewController {
     }
 
 
+  
+    @IBAction func myBackButtonAction(_ sender: Any) {
+        print("Hola")
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func myButtonAction(_ sender: Any) {
         myActivity.startAnimating()
         myButton.isHidden = true
@@ -132,6 +147,7 @@ class ViewController: UIViewController {
                 
         }
     }
+  
     @IBAction func myPageButtonAction(_ sender: Any) {
         
         DispatchQueue.main.async {
