@@ -23,6 +23,7 @@ class ListaProductosViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         super.viewDidLoad()
         title = "Productos"
+        
         productosTableView.register(UINib(nibName: "ArticuloTableViewCell", bundle: nil), forCellReuseIdentifier: "articuloCell")
         productosTableView.rowHeight = 500
         productosTableView.dataSource = self
