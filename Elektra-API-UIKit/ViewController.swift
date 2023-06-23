@@ -19,7 +19,12 @@ class ViewController: UIViewController {
     var Booleano: Bool = false
     var imagenesArticulo: [String]?
     var itemImagenes: Int?
+    var precionFinal: Double?
+    var precioRegular:Double?
+    var porcentajeDescuento: Double?
     
+    @IBOutlet weak var labelDescuento: UILabel!
+    @IBOutlet weak var OfertaStackView: UIStackView!
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myPagecontrol: UIPageControl!
@@ -55,6 +60,8 @@ class ViewController: UIViewController {
             myPagecontrol.isHidden = true
             myPagecontrol.currentPageIndicatorTintColor = .blue
             myPagecontrol.pageIndicatorTintColor = .lightGray
+            
+            OfertaStackView.isHidden = true
         }
     }
 

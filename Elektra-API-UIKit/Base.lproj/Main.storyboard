@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0p-FO-0Yr">
-                                <rect key="frame" x="70" y="503" width="274" height="35"/>
+                                <rect key="frame" x="70" y="503.5" width="274" height="34.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
@@ -45,19 +45,49 @@
                                     <action selector="myPageButtonAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xmg-UE-6de"/>
                                 </connections>
                             </pageControl>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ClM-JW-5EB">
+                                <rect key="frame" x="10" y="128" width="82" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hasta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nB3-Zu-E1k">
+                                        <rect key="frame" x="0.0" y="0.0" width="82" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx9-lh-pLs">
+                                        <rect key="frame" x="0.0" y="53.5" width="82" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="de descuento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok6-vP-e3G">
+                                        <rect key="frame" x="0.0" y="115.5" width="82" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nB3-Zu-E1k" firstAttribute="top" secondItem="ClM-JW-5EB" secondAttribute="top" id="UDO-Vc-X0u"/>
+                                    <constraint firstItem="nB3-Zu-E1k" firstAttribute="leading" secondItem="ClM-JW-5EB" secondAttribute="leading" id="orS-GF-xKi"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a0p-FO-0Yr" secondAttribute="bottom" constant="300" id="8iC-HI-ef8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0p-FO-0Yr" secondAttribute="trailing" constant="70" id="Aqs-Ko-dJ8"/>
+                            <constraint firstAttribute="bottom" secondItem="ClM-JW-5EB" secondAttribute="bottom" constant="580" id="OLD-4n-HWE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mAv-QY-Xjw" secondAttribute="trailing" constant="10" id="Rd0-gV-hnI"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXE-FN-ud6"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bpD-WH-byk"/>
+                            <constraint firstItem="ClM-JW-5EB" firstAttribute="leading" secondItem="mAv-QY-Xjw" secondAttribute="leading" id="fv7-nF-CJJ"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="is1-ea-P1O"/>
                             <constraint firstItem="CVr-6N-Sor" firstAttribute="top" secondItem="mAv-QY-Xjw" secondAttribute="bottom" constant="25" id="j5e-sA-nzQ"/>
                             <constraint firstItem="CVr-6N-Sor" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jTv-Vn-iCU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ExD-Na-wOA" secondAttribute="trailing" constant="50" id="m2q-ff-4qI"/>
+                            <constraint firstItem="ClM-JW-5EB" firstAttribute="top" secondItem="mAv-QY-Xjw" secondAttribute="top" constant="60" id="nBo-vz-A3K"/>
                             <constraint firstItem="ExD-Na-wOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="oHL-qA-M8d"/>
                             <constraint firstItem="a0p-FO-0Yr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="r6h-GM-Fhj"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tC8-FX-XiZ"/>
@@ -68,6 +98,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="JaS-KG-9kV"/>
                     <connections>
+                        <outlet property="OfertaStackView" destination="ClM-JW-5EB" id="EBx-jm-MmT"/>
+                        <outlet property="labelDescuento" destination="Yx9-lh-pLs" id="wBM-Qc-dAw"/>
                         <outlet property="myActivity" destination="t1g-Yg-HgM" id="QUV-Ld-bbl"/>
                         <outlet property="myButton" destination="a0p-FO-0Yr" id="iUy-c4-MRm"/>
                         <outlet property="myImageView" destination="CVr-6N-Sor" id="AcY-S2-35D"/>
@@ -136,6 +168,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
