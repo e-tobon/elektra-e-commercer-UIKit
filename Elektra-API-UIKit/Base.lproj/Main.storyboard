@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0p-FO-0Yr">
-                                <rect key="frame" x="169.5" y="401.5" width="75" height="35"/>
+                                <rect key="frame" x="70" y="503" width="274" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
@@ -34,10 +34,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CVr-6N-Sor">
-                                <rect key="frame" x="20" y="116" width="374" height="194"/>
+                                <rect key="frame" x="20" y="116" width="374" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="8TK-la-xIl"/>
+                                </constraints>
                             </imageView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="ExD-Na-wOA">
-                                <rect key="frame" x="50" y="345" width="314" height="26"/>
+                                <rect key="frame" x="50" y="451" width="314" height="26"/>
                                 <connections>
                                     <action selector="myPageButtonAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="xmg-UE-6de"/>
                                 </connections>
@@ -46,20 +49,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a0p-FO-0Yr" secondAttribute="bottom" constant="300" id="8iC-HI-ef8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a0p-FO-0Yr" secondAttribute="trailing" constant="70" id="Aqs-Ko-dJ8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mAv-QY-Xjw" secondAttribute="trailing" constant="10" id="Rd0-gV-hnI"/>
-                            <constraint firstItem="a0p-FO-0Yr" firstAttribute="top" secondItem="CVr-6N-Sor" secondAttribute="bottom" constant="91.5" id="WzN-AR-UaL"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bXE-FN-ud6"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="bpD-WH-byk"/>
                             <constraint firstItem="mAv-QY-Xjw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="is1-ea-P1O"/>
                             <constraint firstItem="CVr-6N-Sor" firstAttribute="top" secondItem="mAv-QY-Xjw" secondAttribute="bottom" constant="25" id="j5e-sA-nzQ"/>
                             <constraint firstItem="CVr-6N-Sor" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jTv-Vn-iCU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ExD-Na-wOA" secondAttribute="trailing" constant="50" id="m2q-ff-4qI"/>
-                            <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nu3-Zz-fuh"/>
                             <constraint firstItem="ExD-Na-wOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="oHL-qA-M8d"/>
+                            <constraint firstItem="a0p-FO-0Yr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="r6h-GM-Fhj"/>
                             <constraint firstItem="t1g-Yg-HgM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tC8-FX-XiZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CVr-6N-Sor" secondAttribute="trailing" constant="20" id="uMX-x8-dG3"/>
                             <constraint firstItem="ExD-Na-wOA" firstAttribute="top" secondItem="CVr-6N-Sor" secondAttribute="bottom" constant="35" id="w8h-5s-QQS"/>
-                            <constraint firstItem="a0p-FO-0Yr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yyl-Kx-5o3"/>
                             <constraint firstItem="ExD-Na-wOA" firstAttribute="centerX" secondItem="t1g-Yg-HgM" secondAttribute="centerX" id="zH4-Gs-rSQ"/>
                         </constraints>
                     </view>
